@@ -1,0 +1,236 @@
+
+/* Reset cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #edf2f7;
+    color: #263238;
+    line-height: 1.6;
+    padding: 30px 15px;
+}
+
+/* Khung khảo sát */
+.survey-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Phần tiêu đề */
+.survey-header {
+    background-color: #245a81;
+    color: white;
+    padding: 30px;
+}
+
+.survey-header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.survey-header p {
+    color: #e8f2f8;
+    font-size: 15px;
+}
+
+/* Nội dung form */
+form {
+    padding: 30px;
+}
+
+.question {
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 25px;
+    padding-bottom: 22px;
+    min-width: 0;
+}
+
+.question legend,
+.question-title {
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    color: #243b53;
+    margin-bottom: 14px;
+}
+
+.question h2 {
+    font-size: 17px;
+    color: #243b53;
+    margin-bottom: 15px;
+}
+
+/* Các lựa chọn */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+}
+
+.options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #245a81;
+    cursor: pointer;
+}
+
+/* Trường nhập giá */
+.price-inputs {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    max-width: 400px;
+}
+
+.price-inputs label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 6px;
+    color: #52616f;
+    font-size: 14px;
+}
+
+.price-inputs input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.decimal {
+    padding-bottom: 9px;
+    font-weight: bold;
+}
+
+/* Ô nhập ý kiến */
+textarea {
+    display: block;
+    resize: vertical;
+    min-height: 110px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #9bc4e2;
+    border-color: #245a81;
+}
+
+/* Bảng đánh giá */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    border: 1px solid #d9e2ec;
+    padding: 12px 10px;
+    text-align: center;
+}
+
+thead th {
+    background-color: #f0f5f9;
+    font-weight: bold;
+}
+
+tbody th {
+    width: 38%;
+    text-align: left;
+    background-color: #fbfcfd;
+}
+
+td label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* Nút gửi */
+button[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background-color: #245a81;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #194565;
+}
+
+/* Thông tin bảo mật */
+.privacy-note {
+    margin-top: 18px;
+    color: #687887;
+    font-size: 12px;
+    text-align: center;
+}
+
+.privacy-note a {
+    color: #245a81;
+}
+
+/* Tối ưu trên điện thoại */
+@media (max-width: 600px) {
+    body {
+        padding: 12px 8px;
+    }
+
+    .survey-header {
+        padding: 22px 18px;
+    }
+
+    .survey-header h1 {
+        font-size: 25px;
+    }
+
+    form {
+        padding: 22px 18px;
+    }
+
+    .options {
+        gap: 12px 16px;
+    }
+
+    .question legend,
+    .question-title,
+    .question h2 {
+        font-size: 16px;
+    }
+}

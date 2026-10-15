@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="survey-container">
+        <header class="survey-header">
+            <h1>Market Research Survey</h1>
+            <p>Please take a few moments to complete this satisfaction survey.</p>
+        </header>
+
+        <form action="#" method="post">
+            <!-- Age range -->
+            <fieldset class="question">
+                <legend>What is your age range?</legend>
+                <div class="options">
+                    <label><input type="radio" name="age" value="18-24" required> 18-24</label>
+                    <label><input type="radio" name="age" value="25-34"> 25-34</label>
+                    <label><input type="radio" name="age" value="35-50"> 35-50</label>
+                    <label><input type="radio" name="age" value="50+"> 50+</label>
+                </div>
+            </fieldset>
+
+            <!-- Yearly income -->
+            <fieldset class="question">
+                <legend>What is your yearly income range?</legend>
+                <div class="options">
+                    <label><input type="radio" name="income" value="0-25000" required> $0 - $25,000</label>
+                    <label><input type="radio" name="income" value="25001-50000"> $25,001 - $50,000</label>
+                    <label><input type="radio" name="income" value="50001-100000"> $50,001 - $100,000</label>
+                    <label><input type="radio" name="income" value="100000+"> $100,000+</label>
+                </div>
+            </fieldset>
+
+            <!-- Gender identity -->
+            <fieldset class="question">
+                <legend>Gender Identity</legend>
+                <div class="options">
+                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Nonbinary"> Nonbinary</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+            </fieldset>
+
+            <!-- Products purchased -->
+            <fieldset class="question">
+                <legend>Which of the following products have you purchased in the last 2 months? Please check all that apply.</legend>
+                <div class="options">
+                    <label><input type="checkbox" name="products[]" value="Product 1"> Product 1</label>
+                    <label><input type="checkbox" name="products[]" value="Product 2"> Product 2</label>
+                    <label><input type="checkbox" name="products[]" value="Product 3"> Product 3</label>
+                </div>
+            </fieldset>
+
+            <!-- Usage frequency -->
+            <fieldset class="question">
+                <legend>How often would you use our new product?</legend>
+                <div class="options">
+                    <label><input type="radio" name="frequency" value="Daily" required> Daily</label>
+                    <label><input type="radio" name="frequency" value="Weekly"> Weekly</label>
+                    <label><input type="radio" name="frequency" value="Monthly"> Monthly</label>
+                </div>
+            </fieldset>
+
+            <!-- Price -->
+            <fieldset class="question">
+                <legend>What would you pay for the new product?</legend>
+                <div class="price-inputs">
+                    <label>
+                        Dollars
+                        <input type="number" name="dollars" min="0" step="1" placeholder="0">
+                    </label>
+                    <span class="decimal">.</span>
+                    <label>
+                        Cents
+                        <input type="number" name="cents" min="0" max="99" step="1" placeholder="00">
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Product features -->
+            <div class="question">
+                <label for="features" class="question-title">
+                    What features would you like to see in the new product?
+                </label>
+                <textarea id="features" name="features" rows="4" placeholder="Share your ideas..."></textarea>
+            </div>
+
+            <!-- Agreement rating -->
+            <section class="question">
+                <h2>Please rate your level of agreement with the following statements.</h2>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Strongly Disagree</th>
+                                <th>Disagree</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Our products are priced fairly.</th>
+                                <td><label><input type="radio" name="price_fair" value="1" required> 1</label></td>
+                                <td><label><input type="radio" name="price_fair" value="2"> 2</label></td>
+                                <td><label><input type="radio" name="price_fair" value="3"> 3</label></td>
+                                <td><label><input type="radio" name="price_fair" value="4"> 4</label></td>
+                            </tr>
+                            <tr>
+                                <th>Our products are high quality.</th>
+                                <td><label><input type="radio" name="quality" value="1" required> 1</label></td>
+                                <td><label><input type="radio" name="quality" value="2"> 2</label></td>
+                                <td><label><input type="radio" name="quality" value="3"> 3</label></td>
+                                <td><label><input type="radio" name="quality" value="4"> 4</label></td>
+                            </tr>
+                            <tr>
+                                <th>You would recommend our product to a friend or coworker.</th>
+                                <td><label><input type="radio" name="recommend" value="1" required> 1</label></td>
+                                <td><label><input type="radio" name="recommend" value="2"> 2</label></td>
+                                <td><label><input type="radio" name="recommend" value="3"> 3</label></td>
+                                <td><label><input type="radio" name="recommend" value="4"> 4</label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <button type="submit">Submit Survey</button>
+
+            <p class="privacy-note">
+                This form is protected by reCAPTCHA Enterprise and the Google
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                and
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+                apply.
+            </p>
+        </form>
+    </main>
+</body>
+</html>
